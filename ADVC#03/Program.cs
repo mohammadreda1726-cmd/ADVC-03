@@ -274,14 +274,56 @@ namespace ADVC_03
 
             #region 5: Print Queue Simulator
 
+            //// Create a Queue
 
+            //Queue<string> printerQueue = new Queue<string>();
+
+            //// Add 5 documents
+            //printerQueue.Enqueue("Report.pdf");
+            //printerQueue.Enqueue("Invoice.pdf");
+            //printerQueue.Enqueue("Letter.docx");
+            //printerQueue.Enqueue("Resume.pdf");
+            //printerQueue.Enqueue("Photo.jpg");
+
+            //// 1. Print queue contents and Count
+            //Console.WriteLine("Printer Queue:");
+
+            //foreach (string document in printerQueue)
+            //{
+            //    Console.WriteLine(document);
+            //}
+
+            //Console.WriteLine("Count: " + printerQueue.Count);
+
+            //// 2. Peek to see the next document
+            //Console.WriteLine("\nNext document: " + printerQueue.Peek());
+
+            //Console.WriteLine("Count after Peek: " + printerQueue.Count);
+
+            //// 3. Process the queue using Dequeue
+            //Console.WriteLine("\nProcessing Queue:");
+
+            //while (printerQueue.Count > 0)
+            //{
+            //    string document = printerQueue.Dequeue();
+
+            //    Console.WriteLine("Printing: " + document);
+            //}
+
+            //// 4. Try TryDequeue on the empty queue
+            //string nextDocument;
+
+            //if (printerQueue.TryDequeue(out nextDocument))
+            //{
+            //    Console.WriteLine("Printing: " + nextDocument);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("\nTryDequeue failed: Queue is empty.");
+            //}
 
             #endregion
-
-
-
-
-
         }
+
     }
 }
