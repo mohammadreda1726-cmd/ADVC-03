@@ -9,7 +9,7 @@ namespace ADVC_03
     {
         static void Main(string[] args)
         {
-            //#region Exercise 1: Student Grade Manager
+            #region Exercise 1: Student Grade Manager
             //// Create a program that manages student grades using One Of Collections
             ////1.Create a Collection with these grades: 85, 92, 78, 95, 88, 70, 100, 65
             //List<int> grades = new List<int> { 85, 92, 78, 95, 88, 70, 100, 65 };
@@ -72,10 +72,10 @@ namespace ADVC_03
             //    Console.WriteLine(message);
             //}
 
-            //#endregion
+            #endregion
 
 
-            //#region Exercise 2: Leaderboard
+            #region Exercise 2: Leaderboard
             ////Create a leaderboard that automatically sorts players by score.
             //// key = score
             //// value = player name
@@ -133,74 +133,155 @@ namespace ADVC_03
             //    Console.WriteLine(score + " = " + leaderboard[score]);
             //}
 
-            //#endregion
+            #endregion
 
 
             #region Exercise 3: Phone Book
             //Build a phone book application.
             //1.Create a Collection with 4 contacts(name → phone number)
 
-            Dictionary<string, string> phoneBook = new Dictionary<string, string>();
-            phoneBook.Add("Ahmed", "01012345678");
-            phoneBook.Add("Sara", "01123456789");
-            phoneBook.Add("Ali", "01234567890");
-            phoneBook.Add("Mona", "01512345678");
-            //2.Add a new contact using [] syntax (add or update)
+            //Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+            //phoneBook.Add("Ahmed", "01012345678");
+            //phoneBook.Add("Sara", "01123456789");
+            //phoneBook.Add("Ali", "01234567890");
+            //phoneBook.Add("Mona", "01512345678");
+            ////2.Add a new contact using [] syntax (add or update)
 
-            phoneBook["Omar"] = "01098765432";
-            //3.Try adding a duplicate using .Add() — catch the exception and print the error
+            //phoneBook["Omar"] = "01098765432";
+            ////3.Try adding a duplicate using .Add() — catch the exception and print the error
 
-            try
-            { 
-                phoneBook.Add("Ahmed", "01111111111"); 
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message); 
-            }
-            //4.Try adding a duplicate using .TryAdd() — print whether it succeeded
+            //try
+            //{ 
+            //    phoneBook.Add("Ahmed", "01111111111"); 
+            //}
+            //catch (ArgumentException ex)
+            //{
+            //    Console.WriteLine("Error: " + ex.Message); 
+            //}
+            ////4.Try adding a duplicate using .TryAdd() — print whether it succeeded
 
-            bool result = phoneBook.TryAdd("Ahmed", "01222222222");
-            Console.WriteLine("TryAdd succeeded: " + result);
-            //5.Search for a contact that doesn’t exist
+            //bool result = phoneBook.TryAdd("Ahmed", "01222222222");
+            //Console.WriteLine("TryAdd succeeded: " + result);
+            ////5.Search for a contact that doesn’t exist
 
-            if (phoneBook.ContainsKey("Youssef")) 
-            { 
-                Console.WriteLine("Youssef is found");
-            } 
-            else
-            { 
-                Console.WriteLine("Youssef is not found");
-            }
-            //6.Get a contact with a fallback of "Not Found"
+            //if (phoneBook.ContainsKey("Youssef")) 
+            //{ 
+            //    Console.WriteLine("Youssef is found");
+            //} 
+            //else
+            //{ 
+            //    Console.WriteLine("Youssef is not found");
+            //}
+            ////6.Get a contact with a fallback of "Not Found"
 
-            string phone;
-            if (phoneBook.TryGetValue("Youssef", out phone))
-            {
-                Console.WriteLine("Phone: " + phone);
-            }
-            else
-            { 
-                Console.WriteLine("Phone: Not Found");
-            }
-            //7.Print all Keys on one line, then all Values on another line
+            //string phone;
+            //if (phoneBook.TryGetValue("Youssef", out phone))
+            //{
+            //    Console.WriteLine("Phone: " + phone);
+            //}
+            //else
+            //{ 
+            //    Console.WriteLine("Phone: Not Found");
+            //}
+            ////7.Print all Keys on one line, then all Values on another line
 
-            Console.WriteLine("\nKeys:");
-            foreach (string name in phoneBook.Keys) 
-            {
-                Console.Write(name + " ");
-            }
-            Console.WriteLine(); 
-            // Print all Values on another line
+            //Console.WriteLine("\nKeys:");
+            //foreach (string name in phoneBook.Keys) 
+            //{
+            //    Console.Write(name + " ");
+            //}
+            //Console.WriteLine(); 
+            //// Print all Values on another line
 
-            Console.WriteLine("Values:"); 
-            foreach (string number in phoneBook.Values)
-            { 
-                Console.Write(number + " "); 
-            } 
-            Console.WriteLine();
+            //Console.WriteLine("Values:"); 
+            //foreach (string number in phoneBook.Values)
+            //{ 
+            //    Console.Write(number + " "); 
+            //} 
+            //Console.WriteLine();
 
             #endregion
+
+            #region 4: Unique Email Validator
+
+            //// 1. Create a HashSet<string> with a case-insensitive comparer: new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            //HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+            //// 2. Add these emails: "ahmed@test.com", "AHMED@test.com", "sara@test.com","Sara@Test.Com"
+            //emails.Add("ahmed@test.com");
+            //emails.Add("AHMED@test.com");
+            //emails.Add("sara@test.com");
+            //emails.Add("Sara@Test.Com");
+
+            //// 3. Print Count — how many are actually stored? Explain why.
+            //Console.WriteLine("Email Count: " + emails.Count);
+
+            //Console.WriteLine("Stored Emails:");
+
+            //foreach (string email in emails)
+            //{
+            //    Console.WriteLine(email);
+            //}
+
+            //// 4. Create two sets: Set A = {1,2,3,4,5} and Set B = {4,5,6,7,8}
+            //HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+
+            //HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
+
+            ////5.Print the result of: UnionWith, IntersectWith, ExceptWith
+
+            //// UnionWith
+            //HashSet<int> unionSet = new HashSet<int>(setA);
+            //unionSet.UnionWith(setB);
+
+            //Console.WriteLine("\nUnion:");
+
+            //foreach (int number in unionSet)
+            //{
+            //    Console.Write(number + " ");
+            //}
+
+            //// IntersectWith
+            //HashSet<int> intersectSet = new HashSet<int>(setA);
+            //intersectSet.IntersectWith(setB);
+
+            //Console.WriteLine("\nIntersect:");
+
+            //foreach (int number in intersectSet)
+            //{
+            //    Console.Write(number + " ");
+            //}
+
+            //// ExceptWith
+            //HashSet<int> exceptSet = new HashSet<int>(setA);
+            //exceptSet.ExceptWith(setB);
+
+            //Console.WriteLine("\nExcept:");
+
+            //foreach (int number in exceptSet)
+            //{
+            //    Console.Write(number + " ");
+            //}
+
+            //// 6. Use IsSubsetOf to check if {1,2} is a subset of Set A
+            //HashSet<int> subset =new HashSet<int> { 1, 2 };
+
+            //bool result = subset.IsSubsetOf(setA);
+
+            //Console.WriteLine("\n\nIs {1, 2} a subset of Set A? " + result);
+
+            #endregion
+
+            #region 5: Print Queue Simulator
+
+
+
+            #endregion
+
+
+
+
+
         }
     }
 }
