@@ -9,6 +9,9 @@ namespace ADVC_03
     {
         static void Main(string[] args)
         {
+
+            //  * بعتذر علي التاخير في التسليم *
+
             #region Exercise 1: Student Grade Manager
             //// Create a program that manages student grades using One Of Collections
             ////1.Create a Collection with these grades: 85, 92, 78, 95, 88, 70, 100, 65
@@ -366,6 +369,23 @@ namespace ADVC_03
             //    Console.WriteLine("TryPop failed: Stack is empty.");
             //}
             #endregion
+
+            #region Search
+            //Span<T>
+            // Represents a strongly typed list of objects that can be accessed by index.
+            // Provides methods to search, sort, and manipulate lists.
+            
+
+            // SortedList<TKey, TValue>
+            //Represents a collection of key/value pairs
+            //that are sorted by key based on the associated IComparer<T> implementation.
+           
+
+            //SortedDictionary<TKey, TValue>
+            //Represents a collection of key/value pairs that are sorted on the key.
+            #endregion
+
+            // Thank you
         }
     }
 }
