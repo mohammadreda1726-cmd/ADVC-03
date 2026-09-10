@@ -124,7 +124,7 @@ namespace ADVC_03
 
             ////6.Remove the player with score 200 and print the updated list
             //leaderboard.Remove(200);
-            
+
             //Console.WriteLine("\nLeaderboard after removing score 200:"); 
             //scores = new List<int>(leaderboard.Keys);
             //scores.Sort(); 
@@ -139,12 +139,66 @@ namespace ADVC_03
             #region Exercise 3: Phone Book
             //Build a phone book application.
             //1.Create a Collection with 4 contacts(name → phone number)
+
+            Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+            phoneBook.Add("Ahmed", "01012345678");
+            phoneBook.Add("Sara", "01123456789");
+            phoneBook.Add("Ali", "01234567890");
+            phoneBook.Add("Mona", "01512345678");
             //2.Add a new contact using [] syntax (add or update)
+
+            phoneBook["Omar"] = "01098765432";
             //3.Try adding a duplicate using .Add() — catch the exception and print the error
+
+            try
+            { 
+                phoneBook.Add("Ahmed", "01111111111"); 
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message); 
+            }
             //4.Try adding a duplicate using .TryAdd() — print whether it succeeded
+
+            bool result = phoneBook.TryAdd("Ahmed", "01222222222");
+            Console.WriteLine("TryAdd succeeded: " + result);
             //5.Search for a contact that doesn’t exist
+
+            if (phoneBook.ContainsKey("Youssef")) 
+            { 
+                Console.WriteLine("Youssef is found");
+            } 
+            else
+            { 
+                Console.WriteLine("Youssef is not found");
+            }
             //6.Get a contact with a fallback of "Not Found"
+
+            string phone;
+            if (phoneBook.TryGetValue("Youssef", out phone))
+            {
+                Console.WriteLine("Phone: " + phone);
+            }
+            else
+            { 
+                Console.WriteLine("Phone: Not Found");
+            }
             //7.Print all Keys on one line, then all Values on another line
+
+            Console.WriteLine("\nKeys:");
+            foreach (string name in phoneBook.Keys) 
+            {
+                Console.Write(name + " ");
+            }
+            Console.WriteLine(); 
+            // Print all Values on another line
+
+            Console.WriteLine("Values:"); 
+            foreach (string number in phoneBook.Values)
+            { 
+                Console.Write(number + " "); 
+            } 
+            Console.WriteLine();
 
             #endregion
         }
