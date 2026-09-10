@@ -74,7 +74,6 @@ namespace ADVC_03
 
             #endregion
 
-
             #region Exercise 2: Leaderboard
             ////Create a leaderboard that automatically sorts players by score.
             //// key = score
@@ -134,7 +133,6 @@ namespace ADVC_03
             //}
 
             #endregion
-
 
             #region Exercise 3: Phone Book
             //Build a phone book application.
@@ -323,7 +321,51 @@ namespace ADVC_03
             //}
 
             #endregion
-        }
 
+            #region 6: Browser History (Undo)
+            //// Create a Stack for browser history
+
+            //Stack<string> history = new Stack<string>();
+
+            //// 1. Push 5 URLs
+            //history.Push("google.com");
+            //history.Push("github.com");
+            //history.Push("stackoverflow.com");
+            //history.Push("youtube.com");
+            //history.Push("claude.ai");
+
+            //// 2. Peek to see the current page
+
+            //Console.WriteLine("Current Page: " + history.Peek());
+
+            //// 3. Press Back 3 times using Pop
+
+            //Console.WriteLine("\nGoing Back:");
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    string page = history.Pop();
+
+            //    Console.WriteLine("Leaving: " + page);
+            //}
+
+            //// 4. Print the current page after going back
+
+            //Console.WriteLine("\nCurrent Page after Back: " + history.Peek());
+
+            //// 5. Try TryPop on the stack
+
+            //string pageAfterPop;
+
+            //if (history.TryPop(out pageAfterPop))
+            //{
+            //    Console.WriteLine("Removed: " + pageAfterPop);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("TryPop failed: Stack is empty.");
+            //}
+            #endregion
+        }
     }
 }
